@@ -1,0 +1,144 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    /* background-color: white; */
+}
+
+:root {
+    
+    --primary-color:#ab0908; 
+    --secondary-color: #b39a5b;
+    --tertiary-color: orange;
+    --grey:#d4ccac;
+}
+
+/* Grid layout */
+.grid-container {
+    display: grid;
+    grid-template-areas:
+        "header header header"
+        "sidebar-left main-content sidebar-right"
+        "footer footer footer";
+    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-rows: auto 1fr auto;
+    gap: 15px;
+    padding: 10px;
+}
+
+
+/* Header */
+.header {
+    grid-area: header;
+    background-color: var(--secondary-color);
+    text-align: center;
+    padding: 20px;
+    border-radius: 5px;
+    background-image: url(./images/banner.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+}
+
+.header h1 {
+    color: var(--primary-color);
+    font-size: 7rem;
+    margin-top: 80px;
+}
+
+.header h2 {
+    color: var(--secondary-color);
+    font-size: 2rem;
+    margin-top: 10px;
+}
+
+
+.header-image {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+/* Main content */
+.main-content {
+    grid-area: main-content;
+    background-color: #ffffff;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.article-image {
+    width: 100%;
+    max-height: 200px;
+    object-fit: cover;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.main-content h2 {
+    color:var(--primary-color);
+    margin-bottom: 10px;
+}
+
+.main-content p {
+    margin-bottom: 10px;
+}
+
+.main-content a {
+    color:var(--tertiary-color);
+    text-decoration: none;
+}
+
+.main-content a:hover {
+    text-decoration: underline;
+}
+
+
+/* Sidebar styles */
+.sidebar-left,
+.sidebar-right {
+    background-color: #ffffff;
+    padding: 15px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+}
+
+.sidebar-left h2,
+.sidebar-right h2 {
+    margin-bottom: 10px;
+    color: var(--primary-color);
+}
+
+.sidebar-left ul li,
+.sidebar-right ul li {
+    margin: 8px 0;
+}
+
+.sidebar-left ul li a,
+.sidebar-right ul li a {
+    color: #333;
+    text-decoration: none;
+}
+
+.sidebar-left ul li a:hover,
+.sidebar-right ul li a:hover {
+    text-decoration: underline;
+}
+
+
+/* Footer */
+.footer {
+    grid-area: footer;
+    background-color: var(--grey);
+    color: black;
+    text-align: center;
+    padding: 35px;
+    border-radius: 5px;
+    height: 100px;
+}
+
+.footer a{
+    color: black;
+}
